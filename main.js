@@ -122,3 +122,46 @@
 
 // const htmlExample = '<h2>Another one title</h2>';
 // container.insertAdjacentHTML('beforeend', htmlExample);
+
+// const todoList = document.querySelector('#todo-list');
+// const todoForm = document.querySelector('#todo-form');
+// const todoInput = document.querySelector('#todo-input');
+
+// todoForm.addEventListener('submit', formHandler);
+
+// function formHandler(event) {
+//     // Overrides default behavior
+//     // In this case page doesn't reloading automatically
+//     event.preventDefault();
+//     // console.log('Submit!');
+//     // Get text from imput
+//     const taskText = todoInput.value;
+//     // console.log(taskText);
+//     // Create tag 'li' with a markup
+//     // const li = `<li>${taskText}</li>`;
+//     // console.log(li);
+//     // Add markup on the page
+//     // todoList.insertAdjacentHTML('beforeend', li);
+
+//     // Advanced method of handle this task: (Use 'createElemement' method)
+//     const newTask = document.createElement('li');
+//     newTask.innerText = taskText;
+//     todoList.append(newTask);
+
+//     // Create button 'Delete'
+//     const deleteBtn = document.createElement('button');
+//     deleteBtn.setAttribute('role', 'button');
+//     deleteBtn.innerText = 'Delete';
+//     deleteBtn.style['margin-left'] = '15px';
+//     newTask.append(deleteBtn);
+
+//     // Create event when click
+//     deleteBtn.addEventListener('click', function () {
+//         this.closest('li').remove();
+//     });
+
+//     // Clear input field
+//     todoInput.value = '';
+//     // Focus on the input field
+//     todoInput.focus();
+// }
