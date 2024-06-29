@@ -165,3 +165,63 @@
 //     // Focus on the input field
 //     todoInput.focus();
 // }
+
+// Create counter to 1000 and input this to the console
+// const intervalID = setInterval(function () {
+//     console.log('Fired');
+// }, 1000)
+
+// Clear console
+// clearInterval(intervalID);
+
+// Create some function that will be executed in 5 sec
+
+// const timeoutID = setTimeout(function () {
+//     console.log('setTimeout Fired!');
+// }, 5000);
+
+// Clear console
+// clearInterval(timeoutID);
+
+// Stopwatch
+
+// Find element with count representation and store it to the const
+const counterElement = document.querySelector('#counter');
+// Declate variables counter and timer for future manupulations
+let counter = 0;
+let timerID;
+
+// Start
+// Find element - button with id - start
+const btnStart = document.querySelector('#start');
+// Add event to the button : if button was pressed
+// Variables's value 'timerID' increment by 1
+// and output those value to the count representation
+btnStart.onclick = function () {
+    // console.log('btnStart');
+    timerID = setInterval(function () {
+        counter++;
+        counterElement.innerText = counter;
+    }, 1000);
+};
+
+// Pause
+// Find element with id - 'stop'
+const btnPause = document.querySelector('#pause');
+// Also add event to the button 'stop'
+// And if this button was pressed 
+// count will be stop
+btnPause.onclick = function () {
+    clearInterval(timerID);
+}
+
+// Reset
+// Find element with id - 'reset'
+const btnReset = document.querySelector('#reset');
+// Define count value to 0 and output this value
+// to the count representation
+btnReset.onclick = function () {
+    counter = 0;
+    counterElement.innerText = counter;
+    clearInterval(timerID);
+}
