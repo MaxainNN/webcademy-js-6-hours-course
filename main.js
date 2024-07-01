@@ -186,42 +186,182 @@
 // Stopwatch
 
 // Find element with count representation and store it to the const
-const counterElement = document.querySelector('#counter');
+// const counterElement = document.querySelector('#counter');
 // Declate variables counter and timer for future manupulations
-let counter = 0;
-let timerID;
+// let counter = 0;
+// let timerID;
 
 // Start
 // Find element - button with id - start
-const btnStart = document.querySelector('#start');
+// const btnStart = document.querySelector('#start');
 // Add event to the button : if button was pressed
 // Variables's value 'timerID' increment by 1
 // and output those value to the count representation
-btnStart.onclick = function () {
+// btnStart.onclick = function () {
     // console.log('btnStart');
-    timerID = setInterval(function () {
-        counter++;
-        counterElement.innerText = counter;
-    }, 1000);
-};
+//     timerID = setInterval(function () {
+//         counter++;
+//         counterElement.innerText = counter;
+//     }, 1000);
+// };
 
 // Pause
 // Find element with id - 'stop'
-const btnPause = document.querySelector('#pause');
+// const btnPause = document.querySelector('#pause');
 // Also add event to the button 'stop'
 // And if this button was pressed 
 // count will be stop
-btnPause.onclick = function () {
-    clearInterval(timerID);
-}
+// btnPause.onclick = function () {
+//     clearInterval(timerID);
+// }
 
 // Reset
 // Find element with id - 'reset'
-const btnReset = document.querySelector('#reset');
+// const btnReset = document.querySelector('#reset');
 // Define count value to 0 and output this value
 // to the count representation
-btnReset.onclick = function () {
-    counter = 0;
-    counterElement.innerText = counter;
-    clearInterval(timerID);
-}
+// btnReset.onclick = function () {
+//     counter = 0;
+//     counterElement.innerText = counter;
+//     clearInterval(timerID);
+// }
+
+// setTimeout(function () {
+//     console.log('Print after 2 sec');
+//     setTimeout(function () {
+//         console.log('Print after 1.5 sec');
+//     }, 1500);
+// }, 2000);
+
+// Example without delay
+
+// function checkRooms() {
+//     setTimeout(function () {
+//         console.log('Check rooms in hotel');
+//         const avaliableRooms = true;
+//         return avaliableRooms;
+//     }, 1000);
+    // console.log('Check rooms in hotel');
+    // Block of code that send request to the hotel
+    // const avaliableRooms = true;
+    // return avaliableRooms;
+// }
+
+// if (checkRooms) {
+//     console.log('That are some free rooms!');
+// 	console.log('Go to the vacation! 🌴 :)');
+// } else {
+//     console.log('That are not free rooms!');
+// 	console.log('Vacation is canceled 😢 :(');
+// }
+
+// function checkRooms(sucess, failed) {
+//     setTimeout(function () {
+//         console.log('Check rooms');
+//         let avaliableRooms = true;
+
+//         if (avaliableRooms) {
+//             sucess('We have some free rooms.');
+//         } else {
+//             failed('We do not have free rooms.');
+//         }
+//     }, 500);
+// };
+
+// checkRooms(sumbitVacation, cancelVacation);
+
+// function cancelVacation(message) {
+// 	console.log('---- cancelVacation ----');
+// 	console.log('Answer:', message);
+// 	console.log('Vacation delayed 😢 :(');
+// }
+
+// function sumbitVacation(message) {
+// 	console.log('---- sumbitVacation ----');
+// 	console.log('Answer:', message);
+// 	console.log('We are going to vacation! 🌴 :)');
+// }
+
+// function checkTickets(message, sucess, failed) {
+//     setTimeout(() => {
+//         console.log('Ticket function');
+//         console.log('Previous step answer:', message);    
+
+//         console.log('Check tickets...');
+// 		// ---- some code that send request to the company ---
+// 		const availableTickets = true;
+
+// 		if (availableTickets) {
+// 			let message = 'We have tickets';
+// 			success(message);
+// 		} else {
+// 			let message = 'We do not have tickets';
+// 			failed(message);
+// 		}
+//     }, 1000);
+// }
+
+// Final code with all functions
+
+// checkRooms(
+// 	function (messageFromCheckRooms) {
+// 		checkTickets(
+// 			messageFromCheckRooms,
+// 			function () {
+// 				sumbitVacation(messageFromCheckRooms);
+// 			},
+// 			function () {
+// 				cancelVacation(messageFromCheckRooms);
+// 			}
+// 		);
+// 	},
+// 	function (messageFromCheckRooms) {
+// 		cancelVacation(messageFromCheckRooms);
+// 	}
+// );
+
+// Promise
+
+// If we want to wait answer from server
+// and use callback
+
+// function serverRequest() {
+//     const res = 'sucess';
+//     if ((res = 'success')) {
+// 		(function () {
+// 			console.log('DONE');
+// 		})();
+// 	} else {
+// 		(function () {
+// 			console.log('FAIL');
+// 		})();
+// 	}
+// }
+
+// const myFirstPromise = new Promise((resolve, reject) => {
+//     resolve(someValue);
+//     reject('Failure session!');
+// });
+
+// myFirstPromise.then(function() {
+//     console.log('Hello from then');
+// });
+
+const promise = new Promise(function (resolve, reject) {
+	setTimeout(() => {
+		res = 'success';
+		if (res == 'success') {
+			resolve('DONE!');
+		} else {
+			reject('FAIL!');
+		}
+	}, 1000);
+});
+
+promise.then(function(data) {
+    console.log('then');
+    console.log(data);
+
+}).catch(function() {
+    console.log('Catch');
+});
