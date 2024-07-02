@@ -347,21 +347,102 @@
 //     console.log('Hello from then');
 // });
 
-const promise = new Promise(function (resolve, reject) {
-	setTimeout(() => {
-		res = 'success';
-		if (res == 'success') {
-			resolve('DONE!');
-		} else {
-			reject('FAIL!');
-		}
-	}, 1000);
-});
+// const promise = new Promise(function (resolve, reject) {
+// 	setTimeout(() => {
+// 		res = 'success';
+// 		if (res == 'success') {
+// 			resolve('DONE!');
+// 		} else {
+// 			reject('FAIL!');
+// 		}
+// 	}, 1000);
+// });
 
-promise.then(function(data) {
-    console.log('then');
-    console.log(data);
+// promise.then(function(data) {
+//     console.log('then');
+//     console.log(data);
 
-}).catch(function() {
-    console.log('Catch');
-});
+// }).catch(function() {
+//     console.log('Catch');
+// });
+
+
+// Final function with promise
+// Could be function ?
+// const checkRooms = new Promise(function(resolve, reject) {
+//     setTimeout(function () {
+//         console.log('Check rooms in the hotel...');
+//         let avaliableRooms = true;
+//         if (avaliableRooms) {
+//             resolve('There some free rooms! )');
+//         } else {
+//             reject('There are not free rooms! (');
+//         }
+//     }, 1500);
+// }).then(function(data) {
+//     return new Promise(function(resolve, reject) {
+//         setTimeout(() => {
+//             console.log('Check tickets....');
+//             console.log('Answer on previous step: ', data)
+//             const availableTickets = true;
+//             if (availableTickets) {
+//                 resolve('Sucess');
+//             } else {
+//                 let message = 'Fail';
+//                 throw new Error(message);
+//             }
+//         }, 1000);
+//     });
+// }).then(function(data) {
+//     console.log('---- then 2. sumbitVacation ----');
+// 	console.log('Answer on previous step:', data);
+// 	console.log('Going to vacation! 🌴 :)');
+// }).catch(function(data) {
+//     console.log('---- catch ----');
+// 	console.log('Answer on previous step:', data);
+// 	console.log('Vacation is canceled 😢 :(');
+// })
+
+
+function promiseFunction() {
+	return new Promise(function (resolve, reject) {
+		setTimeout(() => {
+			res = 'success123';
+			if (res == 'success') {
+				resolve('DONE!');
+			} else {
+				reject('FAIL!');
+			}
+		}, 500);
+	});
+}
+
+async function startPromise() {
+    try {
+        const result = await promiseFunction();
+        console.log(result);
+    } catch (error) {
+        console.log(error);
+    }
+}
+
+startPromise();
+
+// Real example
+// From chat gpt through
+
+// function fetchData() {
+//     return new Promise((resolve, reject) => {
+//       setTimeout(() => {
+//         resolve('Data fetched successfully');
+//       }, 2000);
+//     });
+//   }
+
+// fetchData()
+//   .then(data => {
+//     document.getElementById('container').innerHTML = data;
+//   })
+//   .catch(error => {
+//     document.getElementById('container').innerHTML = 'Error fetching data';
+// });
