@@ -198,7 +198,7 @@
 // Variables's value 'timerID' increment by 1
 // and output those value to the count representation
 // btnStart.onclick = function () {
-    // console.log('btnStart');
+// console.log('btnStart');
 //     timerID = setInterval(function () {
 //         counter++;
 //         counterElement.innerText = counter;
@@ -241,10 +241,10 @@
 //         const avaliableRooms = true;
 //         return avaliableRooms;
 //     }, 1000);
-    // console.log('Check rooms in hotel');
-    // Block of code that send request to the hotel
-    // const avaliableRooms = true;
-    // return avaliableRooms;
+// console.log('Check rooms in hotel');
+// Block of code that send request to the hotel
+// const avaliableRooms = true;
+// return avaliableRooms;
 // }
 
 // if (checkRooms) {
@@ -404,29 +404,29 @@
 // })
 
 
-function promiseFunction() {
-	return new Promise(function (resolve, reject) {
-		setTimeout(() => {
-			res = 'success123';
-			if (res == 'success') {
-				resolve('DONE!');
-			} else {
-				reject('FAIL!');
-			}
-		}, 500);
-	});
-}
+// function promiseFunction() {
+// 	return new Promise(function (resolve, reject) {
+// 		setTimeout(() => {
+// 			res = 'success123';
+// 			if (res == 'success') {
+// 				resolve('DONE!');
+// 			} else {
+// 				reject('FAIL!');
+// 			}
+// 		}, 500);
+// 	});
+// }
 
-async function startPromise() {
-    try {
-        const result = await promiseFunction();
-        console.log(result);
-    } catch (error) {
-        console.log(error);
-    }
-}
+// async function startPromise() {
+//     try {
+//         const result = await promiseFunction();
+//         console.log(result);
+//     } catch (error) {
+//         console.log(error);
+//     }
+// }
 
-startPromise();
+// startPromise();
 
 // Real example
 // From chat gpt through
@@ -446,3 +446,31 @@ startPromise();
 //   .catch(error => {
 //     document.getElementById('container').innerHTML = 'Error fetching data';
 // });
+
+
+// Use async function
+async function getCurrencies() {
+    // url in separated variable
+    const url = 'https://www.cbr-xml-daily.ru/daily_json.js';
+    // use construction 'await fetch' , link url to fetch , store result in variable
+    const response = await fetch(url);
+    // Get response in json format and store in variable
+    const data = await response.json();
+    // Call function below
+    renderRates(data);
+}
+
+// Call main fucntion
+getCurrencies();
+
+function renderRates(data) {
+    // Get data from json , use 'toFixed(int)' to format int value
+    const usdRate = data.Valute.USD.Value.toFixed(2);
+    const eurRate = data.Valute.EUR.Value.toFixed(2);
+    // Find element with currency's value on the page
+    const usdElement = document.querySelector('#usd');
+    const eurElement = document.querySelector('#eur');
+    // Put value from server to page's elements
+    usdElement.innerText = usdRate;
+    eurElement.innerText = eurRate;
+}

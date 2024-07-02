@@ -1,129 +1,132 @@
 <!DOCTYPE html>
 <html lang="ru">
-	<head>
-		<meta charset="UTF-8" />
-		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>JavaScript for begginers</title>
-		<link rel="stylesheet" href="./style.css" />
-	</head>
-	<body>
-		<header>
-			<h1>JavaScript for begginers</h1>
-			<div class="school-name">lesson from Webcademy</div>
-		</header>
 
-		<!-- 💡 Collapse all block of code: Ctrl + K;  Ctrl + 0 -->
+<head>
+	<meta charset="UTF-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>JavaScript for begginers</title>
+	<link rel="stylesheet" href="./style.css" />
+</head>
 
-        <!-- Example with choosing elements. Selectors. CSS classes -->
-		<!-- If you need to interact with the code below you should remove "none" from those class-->
-		<!--And you can put it on its place again-->  
-		<div class="dom-example none">
-			<h1 class="heading-1" id="heading-1">Title 1</h1>
-			<p>
-				Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus quae blanditiis eaque, at, eos ipsam
-				impedit, consequuntur tenetur magnam fugit atque. Quos perspiciatis tenetur molestiae distinctio
-				voluptatum reprehenderit vitae reiciendis.
-			</p>
-			<h2 class="heading-2 green">Title 2</h2>
-			<p>
-				Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel natus quis esse illo, architecto voluptas
-				asperiores tempora modi perferendis deserunt excepturi at optio doloribus illum, sint dicta nam, harum
-				officiis?
-			</p>
-			<h2 class="heading-2">Title 2</h2>
-			<p>
-				Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel natus quis esse illo, architecto voluptas
-				asperiores tempora modi perferendis deserunt excepturi at optio doloribus illum, sint dicta nam, harum
-				officiis?
-			</p>
-			<h3 class="heading-3 green-text">Title 3</h3>
-			<p>
-				Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel natus quis esse illo, architecto voluptas
-				asperiores tempora modi perferendis deserunt excepturi at optio doloribus illum, sint dicta nam, harum
-				officiis?
-			</p>
-			<p>
-				Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel natus quis esse illo, architecto voluptas
-				asperiores tempora modi perferendis deserunt excepturi at optio doloribus illum, sint dicta nam, harum
-				officiis?
-			</p>
+<body>
+	<header>
+		<h1>JavaScript for begginers</h1>
+		<div class="school-name">lesson from Webcademy</div>
+	</header>
+
+	<!-- 💡 Collapse all block of code: Ctrl + K;  Ctrl + 0 -->
+
+	<!-- Example with choosing elements. Selectors. CSS classes -->
+	<!-- If you need to interact with the code below you should remove "none" from those class-->
+	<!--And you can put it on its place again-->
+	<div class="dom-example none">
+		<h1 class="heading-1" id="heading-1">Title 1</h1>
+		<p>
+			Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus quae blanditiis eaque, at, eos ipsam
+			impedit, consequuntur tenetur magnam fugit atque. Quos perspiciatis tenetur molestiae distinctio
+			voluptatum reprehenderit vitae reiciendis.
+		</p>
+		<h2 class="heading-2 green">Title 2</h2>
+		<p>
+			Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel natus quis esse illo, architecto voluptas
+			asperiores tempora modi perferendis deserunt excepturi at optio doloribus illum, sint dicta nam, harum
+			officiis?
+		</p>
+		<h2 class="heading-2">Title 2</h2>
+		<p>
+			Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel natus quis esse illo, architecto voluptas
+			asperiores tempora modi perferendis deserunt excepturi at optio doloribus illum, sint dicta nam, harum
+			officiis?
+		</p>
+		<h3 class="heading-3 green-text">Title 3</h3>
+		<p>
+			Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel natus quis esse illo, architecto voluptas
+			asperiores tempora modi perferendis deserunt excepturi at optio doloribus illum, sint dicta nam, harum
+			officiis?
+		</p>
+		<p>
+			Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel natus quis esse illo, architecto voluptas
+			asperiores tempora modi perferendis deserunt excepturi at optio doloribus illum, sint dicta nam, harum
+			officiis?
+		</p>
+	</div>
+
+	<!-- Attributes. Events listening. Image -->
+	<div class="dom-example none">
+		<div class="example-block">
+			<img id="logo" src="./img/js.png" alt="Логотип" /><br />
+			<input id="button" type="submit" value="Кнопка" />
 		</div>
+	</div>
 
-        <!-- Attributes. Events listening. Image -->
-	    <div class="dom-example none">
-			<div class="example-block">
-				<img id="logo" src="./img/js.png" alt="Логотип" /><br />
-				<input id="button" type="submit" value="Кнопка" />
+	<!-- Events listening 2. Form -->
+	<div class="dom-example none">
+		<form action="">
+			<input type="text" class="input-text" id="input-text" />
+			<div class="text-block" id="text-block">...</div>
+		</form>
+	</div>
+
+	<!-- Events listening 3. event -->
+	<div class="dom-example none">
+		<h2>Object event</h2>
+		<h3>Task list</h3>
+		<ul id="list">
+			<li>Watch webinar</li>
+			<li>Write a homework</li>
+			<li>Repeat code from lesson</li>
+		</ul>
+	</div>
+
+	<!-- Elements creation -->
+	<div class="dom-example none">
+		<h2>Creation and copying elements</h2>
+		<div id="elementsContainer"></div>
+	</div>
+
+	<!-- ToDo -->
+	<div class="simple-todo none">
+		<div class="tasks-wrapper">
+			<h2>TODO:</h2>
+			<ul id="todo-list">
+				<li>Watch webinar</li>
+				<li>Write a homework</li>
+				<li>Repeat code from lesson</li>
+			</ul>
+		</div>
+		<form id="todo-form">
+			<input id="todo-input" type="text" placeholder="Input task name" />
+			<button type="submit">Add task</button>
+		</form>
+	</div>
+
+	<!-- Timer setInterval -->
+	<div class="dom-example none">
+		<div class="counter" id="counter">0</div>
+		<button role="button" id="start">Start</button>
+		<button role="button" id="pause">Pause</button>
+		<button role="button" id="reset">Reset</button>
+	</div>
+
+	<!-- Fetch example - Currency -->
+	<div class="fetch-example">
+		<h2>Currency</h2>
+		<div class="currency-box">
+			<div class="currency-row" id="dollar">
+				<div class="currency-info">&#36;</div>
+				<span id="usd">76</span> rubles for dollar
+			</div>
+			<div class="currency-row" id="euro">
+				<div class="currency-info">&#8364;</div>
+				<span id="eur">76</span> rubles for euro
 			</div>
 		</div>
 
-        <!-- Events listening 2. Form -->
-		<div class="dom-example none">
-			<form action="">
-				<input type="text" class="input-text" id="input-text" />
-				<div class="text-block" id="text-block">...</div>
-			</form>
-		</div>
+	</div>
 
-        <!-- Events listening 3. event -->
-        <div class="dom-example none">
-            <h2>Object event</h2>
-			<h3>Task list</h3>
-				<ul id="list">
-					<li>Watch webinar</li>
-					<li>Write a homework</li>
-					<li>Repeat code from lesson</li>
-				</ul>
-		</div>
+	<script src="./main.js"></script>
+	<!-- <script src="./js/14-arrays-methods.js"></script> -->
+</body>
 
-        <!-- Elements creation -->
-        <div class="dom-example none">
-            <h2>Creation and copying elements</h2>
-            <div id="elementsContainer"></div>
-        </div>
-
-        <!-- ToDo -->
-		<div class="simple-todo none">
-			<div class="tasks-wrapper">
-				<h2>TODO:</h2>
-				<ul id="todo-list">
-					<li>Watch webinar</li>
-					<li>Write a homework</li>
-					<li>Repeat code from lesson</li>
-				</ul>
-			</div>
-			<form id="todo-form">
-				<input id="todo-input" type="text" placeholder="Input task name" />
-				<button type="submit">Add task</button>
-			</form>
-		</div>
-
-        <!-- Timer setInterval -->
-		<div class="dom-example none">
-            <div class="counter" id="counter">0</div>
-            <button role="button" id="start">Start</button>
-            <button role="button" id="pause">Pause</button>
-            <button role="button" id="reset">Reset</button>
-		</div>
-
-		<!-- Fetch example - Currency -->
-		<div class="fetch-example none">
-			<h2>Currency</h2>
-			<div class="currency-box">
-				<div class="currency-row" id="dollar">
-					<div class="currency-info">&#36;</div>
-					<span id="usd">76</span> rubles for dollar
-				</div>
-				<div class="currency-row" id="euro">
-					<div class="currency-info">&#8364;</div>
-					<span id="eur">76</span> rubles for dollar
-				</div>
-			</div>
-
-		</div>
-
-		<script src="./main.js"></script> 
-		<!-- <script src="./js/14-arrays-methods.js"></script> -->
-	</body>
 </html>
