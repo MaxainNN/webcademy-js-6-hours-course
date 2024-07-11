@@ -1,0 +1,101 @@
+* {  
+    box-sizing: border-box;
+  }
+  
+  body {
+    margin: 0;
+    font-family: "Trebuchet MS", sans-serif;
+    color: #303030;
+  }
+  
+  h1 {
+    text-align: center;
+  }
+  
+  .mix-item {
+     position: relative;
+     text-align: center;
+     margin-bottom: 20px;
+  }
+  
+  .mix-item img {
+     display: block;
+     width: 50%;
+     height: auto;
+     position: relative;
+     margin: 0 auto;
+     left: -15%;
+     border-radius: 50%;
+     transition: .3s linear;
+  }
+  
+  .mix-item:hover img {
+     left: 0;
+  }
+  
+  .mix-color {
+     width: 50%;
+     background: #6AFF7F;
+     padding-bottom: 50%;
+     border-radius: 50%;
+     margin: -50% auto 0;
+     right: -15%;
+     position: relative;
+     transition: .3s linear;
+  }
+  
+  .mix-item:hover .mix-color {
+     right: 0;
+  }
+  
+  .normal .mix-color {
+     mix-blend-mode: normal;
+  }
+  
+  .multiply .mix-color {
+     mix-blend-mode: multiply;
+  }
+  
+  .screen .mix-color {
+     mix-blend-mode: screen;
+  }
+  
+  .overlay .mix-color {
+     mix-blend-mode: overlay;
+  }
+  
+  .darken .mix-color {
+     mix-blend-mode: darken;
+  }
+  
+  .lighten .mix-color {
+     mix-blend-mode: lighten;
+  }
+  
+  .color-dodge .mix-color {
+     mix-blend-mode: color-dodge;
+  }
+  
+  .color-burn .mix-color {
+     mix-blend-mode: color-burn;
+  }
+  
+  .hard-light .mix-color {
+     mix-blend-mode: hard-light;
+  }
+  
+  .soft-light .mix-color {
+     mix-blend-mode: soft-light;
+  }
+  
+  .difference .mix-color {
+     mix-blend-mode: difference;
+  }
+  
+  .exclusion .mix-color {
+     mix-blend-mode: exclusion;
+  }
+  
+  .hue .mix-color {
+     mix-blend-mode: hue;
+  }
